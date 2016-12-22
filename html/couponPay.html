@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>云起快速支付</title>
+		<link rel="stylesheet" type="text/css" href="../css/common/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	</head>
+	<body>
+		<div class="header">
+			<a href="../index.html" class="home">首页</a>
+			<h3>云起优惠券</h3>
+		</div>
+		<div class="payBox content">
+			<form action="#" method="post">
+				<div class="discountCoupon">
+					<p class="choiceStor">
+						<span>请选择优惠券：</span>
+						<select>
+							<option value="0">点击选择优惠券&gt;&gt;</option>
+							<option value="1">抓鸡券</option>
+							<option value="2">车券</option>
+							<option value="3">酒店券</option>
+							<option value="4">餐券</option>
+						</select>
+					</p>
+				</div>
+				<input type="button" value="使用优惠券" id="pay" class="payButton">
+			</form>
+		</div>
+		<div class="footer">
+			<a class="aliPay payButton left" href="#">支付宝支付</a>
+			<a class="tenPay payButton right" href="#">微信支付</a>
+		</div>
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript">
+			function getId(id){
+				return typeof id == "string" ? document.getElementById(id) : id;
+			}
+			getId(pay).onclick = function(){
+				//页面高度和宽度
+				var sHeight = document.documentElement.scrollHeight;
+				var sWidth = document.documentElement.scrollWidth;
+				//可视区域高度和宽度
+				var wHeight = document.documentElement.clientHeight;
+				var wWidth = document.documentElement.clientWidth;
+				//创建遮罩
+				var oMask = document.createElement("div");
+				oMask.id = "mask";
+				oMask.style.height = sHeight + "px";
+				oMask.style.width = sWidth + "px";
+				document.body.appendChild(oMask);
+				
+				
+				var oTipBox = document.createElement("div");
+				oTipBox.id = "tipBox";
+				oTipBox.innerHTML = "<h2>确定订单</h2>"+
+				"<p><span>确定使用优惠券：</span><span id='stor'></span></p>"+
+				"<form action='#' method='post' name='login'><input type='button' value='确定使用' id='surePay'/>"+
+				"<span id='close'><i class='fa fa-times' aria-hidden='true'></i></span></form>";
+				document.body.appendChild(oTipBox);
+				//获取oTipbox的宽高,通用的居中方式，不过这里所有尺寸以PSD设计稿为准，故高度位置由CSS直接设置
+				var dHeight = oTipBox.offsetHeight;
+				var dWidth = oTipBox.offsetWidth;
+				oTipBox.style.left = (wWidth - dWidth)/2 + "px";
+				oTipBox.style.top = (wHeight - dHeight)/3 + "px"
+			    //关闭弹窗
+				var oclose = document.getElementById("close");
+				oclose.onclick = function(){
+					document.body.removeChild(oMask);
+					document.body.removeChild(oTipBox);
+				};
+			}
+		</script>
+		<script type="text/javascript">
+			$("#pay").click(function(){
+				var oOption = $(".discountCoupon option");
+				var sele = $(".discountCoupon select");
+				var oValue = sele.val();
+				var stor = $(oOption.eq(sele.val())).html();
+				var oMoney = $("#money").val()
+				var oPay = $("#money").val();
+
+				if(oValue == 0){
+					$("#mask").remove();
+					$("#tipBox").remove()
+					alert("请选择要使用的优惠券！")
+				}
+				else{
+					$("#stor").html(stor)
+					$("#accountMoney").html(oMoney + "元")
+				}
+			})
+		</script>
+	</body>
+</html>
+

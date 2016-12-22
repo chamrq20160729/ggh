@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>云起快速支付</title>
+		<link rel="stylesheet" type="text/css" href="../css/common/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	</head>
+	<body>
+		<div class="header">
+			<a href="../index.html" class="home">首页</a>
+			<h3>云起快速提现</h3>
+		</div>
+		<div class="payBox content">
+			<form action="#" method="post">
+				<p class="center">你的账号余额为:<span style="color: red;">XXX元</span></p>
+				<p class="center">Tips：余额大于100元才能提现。</p>
+				<input type="tel" name="money" id="money" value="" placeholder="请输入提现金额"/>
+				<input type="button" value="提现" id="pay" class="payButton">
+			</form>
+		</div>
+		<div class="footer">
+
+		</div>
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript">
+			function getId(id){
+				return typeof id == "string" ? document.getElementById(id) : id;
+			}
+			getId(pay).onclick = function(){
+				//页面高度和宽度
+				var sHeight = document.documentElement.scrollHeight;
+				var sWidth = document.documentElement.scrollWidth;
+				//可视区域高度和宽度
+				var wHeight = document.documentElement.clientHeight;
+				var wWidth = document.documentElement.clientWidth;
+				//创建遮罩
+				var oMask = document.createElement("div");
+				oMask.id = "mask";
+				oMask.style.height = sHeight + "px";
+				oMask.style.width = sWidth + "px";
+				document.body.appendChild(oMask);
+				
+				
+				var oTipBox = document.createElement("div");
+				oTipBox.id = "tipBox";
+				oTipBox.innerHTML = "<h2>确定订单</h2>"+
+				"<p><span>提现金额：</span><span>XXX元</span></p>"+
+				"<p><span>支付宝：</span><span>xxxxxxxxxxxx</span></p>"+
+				"<form action='#' method='post' name='login'><input type='button' value='确定提现' id='surePay'/>"+
+				"<span id='close'><i class='fa fa-times' aria-hidden='true'></i></span></form>";
+				document.body.appendChild(oTipBox);
+				//获取oTipbox的宽高,通用的居中方式，不过这里所有尺寸以PSD设计稿为准，故高度位置由CSS直接设置
+				var dHeight = oTipBox.offsetHeight;
+				var dWidth = oTipBox.offsetWidth;
+				oTipBox.style.left = (wWidth - dWidth)/2 + "px";
+				oTipBox.style.top = (wHeight - dHeight)/3 + "px"
+			    //关闭弹窗
+				var oclose = document.getElementById("close");
+				oclose.onclick = function(){
+					document.body.removeChild(oMask);
+					document.body.removeChild(oTipBox);
+				};
+			}
+		</script>
+		<script type="text/javascript">
+			$("#pay").click(function(){
+				var oOption = $(".discountCoupon option");
+				var sele = $(".discountCoupon select");
+				var oValue = sele.val();
+				var stor = $(oOption.eq(sele.val())).html();
+				var oMoney = $("#money").val()
+				if(oValue == 0){
+					$("#mask").remove();
+					$("#tipBox").remove()
+					alert("请选择交易商户！")
+				}
+				else{
+					$("#stor").html(stor)
+					$("#accountMoney").html(oMoney + "元")
+				}
+			})
+		</script>
+	</body>
+</html>
+

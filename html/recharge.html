@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>快速充值</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	</head>
+	<body>
+		<div class="header">
+			<a href="../index.html" class="home">首页</a>
+			<h3>云起用户充值</h3>
+		</div>
+		<div class="payBox content">
+			<div class="payMent">
+				<h3>请选择充值活动：</h3>
+				<button>首充100送1000优惠券</button>
+				<button>充1000送1000余额</button>
+				<button>充3000送5000余额</button>
+			</div>
+			<form action="#" method="post">
+				<h3>不参加活动，直接充值：</h3>
+				<input type="text" name="money" id="money" value="" placeholder="请输入充值金额"/>
+				<div class="payWrap">
+					<input type="button" value="支付宝充值" class="aliPay"/>
+					<input type="button" value="微信充值" class="tenPay"/>
+				</div>
+			</form>
+			<p>Tips：充值过程中请不要关闭浏览器。</p>
+			<p>直接充值不赠送余额，充值直接到账。</p>
+		</div>
+		<div class="footer">
+			<a href="#" class="right">充值活动详情</a>
+		</div>
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".payMent button").click(function(){
+					if($(this).attr("class") == "tPay"){
+						$(this).removeClass("tPay");
+					}
+					else{
+						$(".payMent button").removeClass("tPay");
+						$(this).addClass("tPay");
+						
+						$("#money").attr("disabled","disabled");
+					}
+					
+					if($(".payMent button:eq(0)").attr("class") !== "tPay"){
+						if($(".payMent button:eq(1)").attr("class") !== "tPay"){
+							if($(".payMent button:eq(2)").attr("class") !== "tPay"){
+								$("#money").removeAttr("disabled")
+							}
+						}
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
+
