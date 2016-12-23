@@ -334,3 +334,63 @@ li > button:hover{
 	background: #eee;
 	cursor: pointer;
 }
+/*用户中心//////////////////////////*/
+.userContent p{
+	margin-bottom: 20px;
+	margin-left: 15%;
+	font-size: 20px;
+}
+.recharge{
+	display: inline-block;
+	padding: 0 10px;
+	color: white;
+	background: rgb(0,170,50);
+	border-radius: 4px;
+}
+/*记录表////*/
+.userHistory h2{
+	margin-top: 20px;
+}
+.userHistory table{
+	margin: 10px auto;
+	border: 1px solid;
+}
+.userHistory tr{
+	margin: 10px 0;
+}
+.userHistory tr:nth-child(odd){
+	background: #ddf;
+}
+.userHistory th{
+	color: #fff;
+	background: #4aa;
+}
+.userHistory th,td{
+	padding: 5px 5px;
+	border-right: 1px solid #aaa;
+}
+.userHistory ul{
+	display: inline-block;
+	width: 100%;
+	background: #ccc;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+.userHistory li{
+	float: left;
+	padding: 5px 4%;
+	color: #444;
+	font-weight: 700;
+	list-style: none;
+}
+.userHistory div{
+	display: none;
+}
+.userHistory .show{
+	display: block;
+}
+.userHistory .showList{
+	color: #fff;
+	background: #4aa;
+	border-radius: 8px;
+}
