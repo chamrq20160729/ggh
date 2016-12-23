@@ -16,8 +16,8 @@
 	width: calc(50% - 45px);
 	/*兼容UC*/
 	width: 37%;
-	margin: 10px;
-	padding: 10px;
+	margin:2.8%;
+	padding: 3%;
 	font-size: 80px;
 	text-align: center;
 	border: 1px solid #ccc;
@@ -234,7 +234,7 @@ li > button:hover{
 }
 .payBox .payWrap input{
 	color: #fff;
-	background: rgb(0, 150, 90);;
+	background: rgb(0, 150, 90);
 }
 .payBox .payWrap input:hover {
 	background: rgb(250, 150, 90);
@@ -244,7 +244,7 @@ li > button:hover{
 	box-shadow: 5px 5px 5px #5a5;
 }
 .payBox p{
-	margin-left: 7%;
+	text-align: center;
 }
 /*支付界面微调*/
 .payBox #pay{
@@ -335,6 +335,9 @@ li > button:hover{
 	cursor: pointer;
 }
 /*用户中心//////////////////////////*/
+.userContent{
+	margin-bottom: 30px;
+}
 .userContent p{
 	margin-bottom: 20px;
 	margin-left: 15%;
@@ -348,12 +351,33 @@ li > button:hover{
 	border-radius: 4px;
 }
 /*记录表////*/
-.userHistory h2{
-	margin-top: 20px;
+.userHistory {
+	padding: 2%;
+}
+.userHistory ul{
+	display: inline-block;
+	width: 100%;
+	background: #ccc;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+.userHistory li{
+	float: left;
+	width: 19%;
+	padding: 5px 3%;
+	color: #444;
+	font-weight: 700;
+	list-style: none;
 }
 .userHistory table{
 	margin: 10px auto;
 	border: 1px solid;
+}
+#payHistory table{
+	width: 800px;
+}
+#accHistory table{
+	width: 500px;
 }
 .userHistory tr{
 	margin: 10px 0;
@@ -369,25 +393,13 @@ li > button:hover{
 	padding: 5px 5px;
 	border-right: 1px solid #aaa;
 }
-.userHistory ul{
-	display: inline-block;
-	width: 100%;
-	background: #ccc;
-	border: 1px solid #ccc;
-	border-radius: 8px;
-}
-.userHistory li{
-	float: left;
-	padding: 5px 4%;
-	color: #444;
-	font-weight: 700;
-	list-style: none;
-}
+
 .userHistory div{
 	display: none;
 }
 .userHistory .show{
 	display: block;
+	overflow-x: scroll;
 }
 .userHistory .showList{
 	color: #fff;
