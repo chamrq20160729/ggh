@@ -5,24 +5,9 @@
 	list-style: none;
 }
 .content{
-	margin: 50px auto;
+	margin: 40px auto;
 }
-/*首页*/
-.contentIndex{
-	position: relative;
-}
-.contentIndex a{
-	display: inline-block;
-	width: calc(50% - 45px);
-	/*兼容UC*/
-	width: 37%;
-	margin:2.8%;
-	padding: 3%;
-	font-size: 80px;
-	text-align: center;
-	border: 1px solid #ccc;
-	border-radius: 15px;
-}
+/*页头页尾*/
 .header{
 	position: fixed;
 	top: 0;
@@ -30,10 +15,11 @@
 	width: 100%;
 	height: 30px;
 	padding: 5px;
-	background: #acc;
+	background: rgb(243,43,52);
 	z-index: 10;
 }
 .header h3{
+	color: white;
 	text-align: center;
 	line-height: 30px;
 }
@@ -61,6 +47,47 @@
 .right{
 	float: right;
 }
+/*首页*/
+.contentIndex{
+	position: relative;
+}
+.contentIndex a{
+	position: relative;
+	display: inline-block;
+	width: calc(50% - 45px);
+	/*兼容UC*/
+	width: 25%;
+	margin-left:16%;
+	margin-top: 15%;
+/*	padding-top: 25%;*/
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+}
+.contentIndex a i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: white;
+	font-size: 60px;
+	transform: translate(-50%,-50%);
+}
+.contentIndex a span{
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: -50px;
+	transform: translate(-50%,0);
+}
+/*.contentIndex .paybg{
+	background: rgb(235,170,30);
+}
+.contentIndex .rebg{
+	background: rgb(244,70,70);
+}
+.contentIndex .coubg{
+	background: rgb(108,233,24);
+}*/
 /*登陆界面////////////////////////////*/
 .home{
 	position: absolute;
