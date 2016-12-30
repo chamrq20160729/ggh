@@ -19,18 +19,8 @@
 				<button>充3000送5000余额</button>
 			</div>
 			<form action="#" method="post">
-				<h3>不参加活动，直接充值：</h3>
-				<input type="text" name="money" id="money" value="" placeholder="请输入充值金额"/>
-				<div class="payWrap">
-					<input type="button" value="支付宝充值" class="aliPay"/>
-					<input type="button" value="微信充值" class="tenPay"/>
-				</div>
+				<input type="button" value="微信充值" class="tenPay"/>
 			</form>
-			<p>Tips：充值过程中请不要关闭浏览器。</p>
-			<p>直接充值不赠送余额，充值直接到账。</p>
-		</div>
-		<div class="footer">
-			<a href="#" class="right">充值活动详情</a>
 		</div>
 		<script src="../js/jquery-3.1.0.min.js"></script>
 		<script type="text/javascript">
@@ -42,16 +32,6 @@
 					else{
 						$(".payMent button").removeClass("tPay");
 						$(this).addClass("tPay");
-						
-						$("#money").attr("disabled","disabled");
-					}
-					
-					if($(".payMent button:eq(0)").attr("class") !== "tPay"){
-						if($(".payMent button:eq(1)").attr("class") !== "tPay"){
-							if($(".payMent button:eq(2)").attr("class") !== "tPay"){
-								$("#money").removeAttr("disabled")
-							}
-						}
 					}
 				})
 			})
