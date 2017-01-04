@@ -24,18 +24,16 @@
 	line-height: 30px;
 }
 .footer{
-	position: fixed;
-	left: 0;
-	bottom: 20px;
 	height: 40px;
 	box-sizing: border-box;
 	width: 100%;
+	margin-top: 20%;
 	padding: 5px;
 	z-index: 10;
 }
 .footer a{
 	display: inline-block;
-	width: 37%;
+	width: 36%;
 	margin: 0 6%;
 	line-height: 30px;
 	text-align: center;
@@ -65,10 +63,6 @@
 	text-align: center;
 	border-radius: 50%;
 }
-.contentIndex a img{
-	border-radius: 50%;
-}
-
 .contentIndex a span{
 	display: block;
 	position: absolute;
@@ -77,17 +71,13 @@
 	transform: translate(-50%,0);
 	color: #444;
 }
-
-.loginBtn{
-	border-radius: ;
-}
 /*登陆界面////////////////////////////*/
 .home{
 	position: absolute;
 	right: 0;
 	top: 0;
 	padding: 9px 20px;
-	color: #333;
+	color: #fff;
 }
 .logIn{
 	width: 80%;
@@ -246,10 +236,10 @@ li > button:hover{
 .payBox button {
 	display: block;
 	width: 80%;
-	color: #fff;
-	background: rgb(50, 140, 150);
+	color: rgb(243,43,52);
+/*	background: rgb(50, 140, 150);*/
+	border: 1px solid rgb(243,43,52);
 	font-size: 20px;
-	border: 0;
 	border-radius: 20px;
 	cursor: pointer;
 }
@@ -261,8 +251,9 @@ li > button:hover{
 	background: rgb(250, 150, 90);
 }
 .payBox .payMent .tPay{
-	background: rgb(60, 190, 60);
-	box-shadow: 5px 5px 5px #5a5;
+	color: #fff;
+	background: rgb(243,43,52);;
+/*	box-shadow: 5px 5px 5px rgb(243,43,52);*/
 }
 .payBox p{
 	text-align: center;
