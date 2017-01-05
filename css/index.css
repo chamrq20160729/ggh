@@ -4,6 +4,9 @@
 	text-decoration: none;
 	list-style: none;
 }
+body{
+	background: rgb(235,235,235);
+}
 .content{
 	margin: 40px auto;
 }
@@ -18,58 +21,49 @@
 	background: rgb(33,185,233);
 	z-index: 10;
 }
-.header h3{
+.header p{
 	color: white;
 	text-align: center;
 	line-height: 30px;
 }
-.footer{
-	height: 40px;
-	box-sizing: border-box;
-	width: 100%;
-	margin-top: 20%;
-	padding: 5px;
-	z-index: 10;
-}
-.footer a{
-	display: inline-block;
-	width: 36%;
-	margin: 0 6%;
-	line-height: 30px;
-	text-align: center;
-	border-radius: 20px;
-}
-.footer .loginBtn{
-	color: #fff;
-	background: rgb(243,43,52);
-}
-.footer .signInBtn{
-	color: rgb(243,43,52);
-	border: 1px solid rgb(243,43,52);
-}
 /*首页*/
-.contentIndex{
-	position: relative;
-}
-.contentIndex a{
-	position: relative;
-	display: inline-block;
-	width: calc(50% - 45px);
-	/*兼容UC*/
-	width: 25%;
-	margin-left:16%;
-	margin-top: 15%;
-/*	padding-top: 25%;*/
-	text-align: center;
-	border-radius: 50%;
-}
-.contentIndex a span{
+.userLogin a{
 	display: block;
-	position: absolute;
-	left: 50%;
+	margin: 100px 0;
+}
+.userLogin a img{
+	display: block;
+	width: 25%;
+	margin: 0 auto 10px;
+}
+.userLogin a span{
+	display: block;
+	color: #555;
+	text-align: center;
+}
+.contentIndex li{
+	float: left;
+	width: 33.333%;
+}
+.contentIndex li a{
+	position: relative;
+	display: block;
 	width: 100%;
-	transform: translate(-50%,0);
-	color: #444;
+	height: 120px;
+	padding-top: 20px;
+	color: rgb(33,185,233);
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+}
+.contentIndex li a i{
+	display: block;
+	font-size: 40px;
+	text-align: center;
+	
+}
+.contentIndex li a span{
+	display: block;
+	text-align: center;
 }
 /*登陆界面////////////////////////////*/
 .home{
@@ -206,7 +200,7 @@ li > button:hover{
 .payBox{
 	padding: 5%;
 }
-.payBox input,.payBox button {
+.payBox input{
 	margin: 20px auto;
 	font-size: 20px;
 	line-height: 40px;
@@ -224,24 +218,40 @@ li > button:hover{
 	border: 1px solid #ccc;
 	border-radius: 8px;
 }
-
-.payBox input[type="button"]{
-	width: 40%;
-	margin: 0 30%;
-	color: white;
-	background: rgb(243,43,52);
-	border: 1px solid #ccc;
-	border-radius: 20px;
+.payBox .payMent{
+	border: 1px solid transparent;
+	border-radius: 8px;
 }
-.payBox button {
+.payBox input[type="button"]{
+	width: 100%;
+	margin-top: 40px;
+	color: white;
+	background: rgb(25,191,263);
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+.payBox button{
 	display: block;
-	width: 80%;
-	color: rgb(243,43,52);
-/*	background: rgb(50, 140, 150);*/
-	border: 1px solid rgb(243,43,52);
+	width: 100%;
+	padding: 10px;
+	color: #555;
+	background: #fff;
+	border: 0;
+	border-top: 1px solid #ddd;
+	border-left: 0;
+	border-right: 0;
 	font-size: 20px;
-	border-radius: 20px;
 	cursor: pointer;
+}
+.payBox button:first-child{
+	margin-top: 0;
+	border: 0;
+	border-radius: 8px 8px 0 0;
+}
+.payBox button:last-child{
+	margin-bottom: 0;
+	border-radius: 0 0 8px 8px;
 }
 .payBox .payWrap input{
 	color: #fff;
@@ -252,7 +262,7 @@ li > button:hover{
 }
 .payBox .payMent .tPay{
 	color: #fff;
-	background: rgb(243,43,52);;
+	background: rgb(25,191,263);;
 /*	box-shadow: 5px 5px 5px rgb(243,43,52);*/
 }
 .payBox p{
