@@ -8,7 +8,8 @@ body{
 	background: rgb(235,235,235);
 }
 .content{
-	margin: 40px auto;
+	margin-top: 40px 0;
+	padding: 40px 0;
 }
 .clearfix:after{
 	content: "";
@@ -162,81 +163,78 @@ h2{
 .login3 a:hover{
 	color:green;
 }
- li > label{
-	display: inline-block;
-	font-size: 20px;
-}
- li > input{
+ .contentSignIn li{
+ 	margin: 15px;
+ 	background: #FFF;
+ 	border-radius: 4px;
+ }
+.contentSignIn li > input{
 	display: inline-block;
 	width: 60%;
 	margin: 10px auto;
-	padding: 10px;
 	color: #444;
-	font-size: 16px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+	font-size: 14px;
+	border: 0;
 }
- li .star{
+.titleLeft{
+	display: inline-block;
+	width: 25%;
+	height: 38px;
+	padding: 0 5px;
+	color: #000;
+	background: #ddd;
+	text-align: center;
+	line-height: 38px;
+	border-radius: 4px 0 0 4px;
+}
+.contentSignIn li .star{
+	float: right;
+	margin-right: -20px;
 	color: red;
+	line-height: 38px;
 	font-size: 20px;
 	font-weight: 700;
 }
 
-/*性别设置*/
- li #radio{
-	position: relative;
-	top: 2px;
-	width: 20px;
-	margin-right: 10%;
-}
-.sfz,.referrer,.man{
-	margin-left: 5%;
-}
-
-.agreenBox{
-	margin: 10px auto;
-	text-align: center;
-}
-
 /*验证码设置*/
-.verifyBox p{
-	text-align: center;
-}
 .verifyBox input{
-	width: 40%;
-	margin: 3%;
-	padding: 2%;
+	width: 49.2%;
+	padding: 6px 10px;
 	font-size: 16px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+	border: 0;
+	box-sizing: border-box;
 }
-.verifyBox input[type="submit"]{
-	background: #acf;
+.verifyBox #sub{
+	color: white;
+	background: rgb(24,190,238);
+	border-radius: 0 4px 4px 0;
+}
+.agreenBox{
+	width: 90%;
+	margin: 0 auto;
+	font-size: 14px;
 }
 /*注册按钮*/
- li #signin3{
+#signin3{
 	display: block;
-	width: 50%;
-	height: 50px;
-	margin: 0 auto;
+	width: 100%;
+	height: 40px;
+	margin-top: 100px;
 	color: white;
-	background: rgb(255, 190, 50);
+	background: rgb(24,190,238);
 	font-size: 20px;
 	border: 0;
-	border-radius: 8px;
-	transition: all 0.3s;
+	border-radius: 4px;
 }
- li #signin3:hover{
+#signin3:hover{
 	background: #7da;
 	cursor: pointer;
 }
-li > button:hover{
-	background: #7da;
-	cursor: pointer;
-}
+
 /*支付&充值&提现&优惠券页面//////////////////////*/
 .payBox{
 	padding: 5%;
+	padding-top: 60px;
 }
 .payBox input{
 	margin: 20px auto;
@@ -336,16 +334,19 @@ li > button:hover{
 }
 .contentCouponPay .couponPayWrap{
 	position: relative;
-	height: 120px;
 	background: #fff;
+}
+.contentCouponPay li{
+	margin: 10px 0;
 }
 .contentCouponPay li div div{
 	float: left;
-	padding: 15px 5px;
+	padding: 20px 5px;
+	color: #000;
 }
 .contentCouponPay li div form{
 	position: absolute;
-	top: 20%;
+	top: 35%;
 	right: 10px;
 	width: 20%;
 	height: 30px;
@@ -425,10 +426,31 @@ li > button:hover{
 	cursor: pointer;
 }
 /*用户中心//////////////////////////*/
+.logOut{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 9px 20px;
+	color: #fff;
+	font-size: 14px;
+}
 .userContent{
 	margin-bottom: 30px;
 }
-.userContent p{
+.userPicture{
+	margin: 30px 0 20px;
+}
+.userPicture img{
+	display: block;
+	margin: 0 auto 10px;
+}
+.userPicture p{
+	text-align: center;
+}
+.userPicture p .colorRed{
+	color: red;
+}
+.userContent > p{
 	margin-bottom: 20px;
 	margin-left: 15%;
 	font-size: 20px;
@@ -440,8 +462,56 @@ li > button:hover{
 	background: rgb(0,170,50);
 	border-radius: 4px;
 }
+.userMoney p{
+	width: 50%;
+	height: 50px;
+	color: white;
+	background: rgb(54,176,214);
+	line-height: 50px;
+	font-size: 16px;
+	text-align: center;
+}
+.userMoney p i{
+	font-size: 20px;
+}
+.userMoney .left{
+	float: left;
+	border-right: 1px solid #fff;
+	box-sizing: border-box;
+}
+.userMoney .right{
+	float: right;
+}
+.menu a{
+	display: block;
+	width: 95%;
+	padding: 5px 10px;
+	margin: 10px auto;
+	color: #555;
+	background: #fff;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+.menu a i{
+	float: right;
+	margin-top: 2px;
+}
+/*用户设置*/
+.signInOut a{
+	position: fixed;
+	left: 0;
+	bottom: 20px;
+	display: block;
+	width: 95%;
+	margin: 0 2.5%;
+	padding: 10px 0;
+	color: #fff;
+	background: #f00;
+	text-align: center;
+	border-radius: 8px;
+}
 /*记录表////*/
-.userHistory {
+/*.userHistory {
 	padding: 2%;
 }
 .userHistory ul{
@@ -495,4 +565,4 @@ li > button:hover{
 	color: #fff;
 	background: #4aa;
 	border-radius: 8px;
-}
+}*/
