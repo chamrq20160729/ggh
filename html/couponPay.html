@@ -6,28 +6,39 @@
 		<title>云起快速支付</title>
 		<link rel="stylesheet" type="text/css" href="../css/common/font-awesome.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/font/iconfont.css"/>
 	</head>
 	<body>
 		<div class="header">
-			<a href="../index.html" class="home">首页</a>
-			<h3>云起优惠券</h3>
+			<a href="../index.html" class="home">
+				<i class="iconfont icon-fanhui"></i>
+			</a>
+			<p>云起优惠券</p>
 		</div>
-		<div class="payBox content">
-			<form action="#" method="post">
-				<div class="discountCoupon">
-					<p class="choiceStor">
-						<span>请选择优惠券：</span>
-						<select>
-							<option value="0">点击选择优惠券&gt;&gt;</option>
-							<option value="1">抓鸡券</option>
-							<option value="2">车券</option>
-							<option value="3">酒店券</option>
-							<option value="4">餐券</option>
-						</select>
-					</p>
-				</div>
-				<input type="button" value="使用优惠券" id="pay" class="payButton">
-			</form>
+		<div class="contentCouponPay content">
+			<ul>
+				<li>
+					<a href="#">
+						<div class="couponPayWrap clearfix">
+							<img src="../imgs/cpb.png" width="30%"/>
+							<div class="XXX">
+								<p>北汽260汽车兑换券</p>
+								<p class="fontSize">
+									<span>有效期：</span>
+									<span>2016-5-6~2017.5.6</span>
+								</p>
+								<p class="fontSize">
+									<span>编号：</span>
+									<span>1234567</span>
+								</p>
+								<form action="" method="post">
+									<input type="button" value="使用"/>
+								</form>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
 		</div>
 		<!--<div class="footer">
 			<a class="aliPay payButton left" href="#">支付宝支付</a>

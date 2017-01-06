@@ -10,6 +10,11 @@ body{
 .content{
 	margin: 40px auto;
 }
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
 /*页头页尾*/
 .header{
 	position: fixed;
@@ -68,7 +73,7 @@ body{
 /*登陆界面////////////////////////////*/
 .home{
 	position: absolute;
-	right: 0;
+	left: 0;
 	top: 0;
 	padding: 9px 20px;
 	color: #fff;
@@ -76,23 +81,45 @@ body{
 .logIn{
 	width: 80%;
 	margin: 20px auto;
-	font-size: 20px;
 }
 .logIn div{
-	margin-bottom: 20px;
+	width: 80%;
+	margin: 0 auto 20px;
+	padding: 5px;
+	background: #fff;
+	border-radius: 4px;
 }
-.logIn input[type="text"]{
-	width: 95%;
-	height: 20px;
-	margin-top: 5px;
-	padding: 3%;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+.logIn .pW{
+	margin-bottom: 10px;
 }
-
+.userPic img{
+	display: block;
+	margin: 80px auto 50px;
+}
+.logIn input[type="text"],.logIn input[type="password"]{
+	height: 28px;
+	padding-left: 3%;
+	line-height: 28px;
+	border: 0;
+	border-left: 1px solid #ccc;
+}
+.logIn i{
+	padding: 0 5px;
+	color: #555;
+}
+.logIn .right{
+	float: right;
+	line-height: 28px;
+}
+.logIn .forgot{
+	margin-right: 10%;
+	margin-bottom: 10px;
+	color: #555;
+	font-size: 14px;
+}
 .logIn input[type="submit"]{
 	display: block;
-	width: 40%;
+	width: 80%;
 	height: 40px;
 	margin: 30px auto;
 	background: #4cc;
@@ -100,6 +127,17 @@ body{
 	border-radius: 2px;
 	font-size: 20px;
 	color: white;
+}
+.contentLogIn > a{
+	display: block;
+	width: 64%;
+	margin: 150px auto 0;
+	padding: 10px 0;
+	color: #555;
+	background: #fff;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 12px;
 }
 /*注册界面////////////////////////////////////////////////*/
 .contentSignIn{
@@ -291,6 +329,36 @@ li > button:hover{
 .payBox .center{
 	margin: 10px;
 	text-align: center;
+}
+/*优惠券  ///.contentCouponPay*/
+.contentCouponPay img{
+	float: left;
+}
+.contentCouponPay .couponPayWrap{
+	position: relative;
+	height: 120px;
+	background: #fff;
+}
+.contentCouponPay li div div{
+	float: left;
+	padding: 15px 5px;
+}
+.contentCouponPay li div form{
+	position: absolute;
+	top: 20%;
+	right: 10px;
+	width: 20%;
+	height: 30px;
+}
+.fontSize{
+	font-size: 12px
+}
+.contentCouponPay li input{
+	width: 100%;
+	height: 30px;
+	background: #fff;
+	border: 1px solid #555;
+	border-radius: 8px;
 }
 /*弹窗样式*/
 #mask{
