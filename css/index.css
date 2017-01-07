@@ -323,10 +323,56 @@ h2{
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
-/*提现界面微调*/
-.payBox .center{
-	margin: 10px;
+/*提现界面*/
+.contentWd div{
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.contentWd .userBalanceWrap > span{
+	display: block;
+	width: 60%;
+	margin: 20px auto 10px;
+	color: rgb(239,63,22);
+	font-size: 14px;
+}
+.contentWd p{
+	width: 60%;
+	margin: 10px auto;
+	background: #fff;
+	border-radius: 4px;
+	
+}
+.contentWd .bgGray{
+	display: inline-block;
+	width: 40%;
+	padding: 10px 0;
+	background: #ccc;
+	font-size: 14px;
 	text-align: center;
+	border-radius: 4px 0 0 4px;
+}
+.contentWd form p input{
+	display: inline-block;
+	width: 55%;
+	text-align: center;
+	border: 0;
+}
+.contentWd .userBalance .colorRed{
+	display: inline-block;
+	width: 55%;
+	font-size: 14px;
+	text-align: center;
+}
+.contentWd input[type="button"]{
+	display: block;
+	width: 95%;
+	height: 40px;
+	margin: 40px auto 0;
+	color: #fff;
+	background: rgb(33,185,233);
+	font-size: 16px;
+	border: 0;
+	border-radius: 4px;
 }
 /*优惠券  ///.contentCouponPay*/
 .contentCouponPay img{
@@ -447,7 +493,7 @@ h2{
 .userPicture p{
 	text-align: center;
 }
-.userPicture p .colorRed{
+.colorRed{
 	color: red;
 }
 .userContent > p{
@@ -508,61 +554,25 @@ h2{
 	color: #fff;
 	background: #f00;
 	text-align: center;
-	border-radius: 8px;
+	border-radius: 4px;
 }
-/*记录表////*/
-/*.userHistory {
-	padding: 2%;
-}
-.userHistory ul{
-	display: inline-block;
-	width: 100%;
-	background: #ccc;
-	border: 1px solid #ccc;
-	border-radius: 8px;
-}
-.userHistory li{
-	float: left;
-	width: 19%;
-	padding: 5px 3%;
-	color: #444;
-	font-weight: 700;
-	list-style: none;
-}
-.userHistory table{
-	margin: 10px auto;
-	border: 1px solid;
-}
-#payHistory table{
-	width: 800px;
-}
-#accHistory table{
-	width: 500px;
-}
-.userHistory tr{
-	margin: 10px 0;
-}
-.userHistory tr:nth-child(odd){
-	background: #ddf;
-}
-.userHistory th{
-	color: #fff;
-	background: #4aa;
-}
-.userHistory th,td{
-	padding: 5px 5px;
-	border-right: 1px solid #aaa;
-}
-
-.userHistory div{
-	display: none;
-}
-.userHistory .show{
+/*账单*/
+.contentBill select{
 	display: block;
-	overflow-x: scroll;
+	width: 100%;
+	text-align: center;
+	border: 0;
 }
-.userHistory .showList{
-	color: #fff;
-	background: #4aa;
-	border-radius: 8px;
-}*/
+.contentBill option{
+	padding: 10px 0;
+}
+.contentBill .history{
+	position: relative;
+	margin: 10px auto;
+}
+.contentBill .history i{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	-moz-user-select: none;
+}

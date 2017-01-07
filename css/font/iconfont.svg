@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Fri Jan  6 18:18:00 2017
+Created by FontForge 20120731 at Sat Jan  7 14:21:58 2017
  By admin
 </metadata>
 <defs>
@@ -42,6 +42,8 @@ d="M122 420q-49 0 -84 -34.5t-35 -83.5t35 -84t84 -35t83.5 35t34.5 84t-34.5 83.5t-
 t-83.5 34.5z" />
     <glyph glyph-name="llmainpageback" unicode="&#xe602;" 
 d="M481 596zM476 637zM369 297l381 380q10 10 10 24t-10 24l-12 11q-10 10 -23.5 10t-23.5 -10l-417 -415q-10 -10 -10 -24t10 -24l417 -415q10 -10 23.5 -10t23.5 10l12 12q10 10 10 23.5t-10 23.5z" />
+    <glyph glyph-name="xiala" unicode="&#xe62b;" 
+d="M784 441l-272 -271l-272 271l-45 -45l317 -317l317 317z" />
     <glyph glyph-name="mima" unicode="&#xe692;" 
 d="M500 207h24q14 0 24.5 -10.5t10.5 -24.5v-163q0 -14 -10.5 -24.5t-24.5 -10.5h-24q-14 0 -24.5 10.5t-10.5 24.5v163q0 14 10.5 24.5t24.5 10.5zM884 323v-419q0 -19 -13.5 -32.5t-32.5 -13.5h-652q-19 0 -32.5 13.5t-13.5 32.5v419h744zM954 393h-884v-489q0 -48 34 -82
 t82 -34h652q48 0 82 34t34 82v489v0zM861 393h-70v70q0 116 -83 197.5t-196 81.5q-114 0 -196.5 -82.5t-82.5 -196.5v-70h-70v70q0 93 47 174t127.5 128t174.5 47q93 0 173 -45.5t128 -126.5t48 -177v-70z" />

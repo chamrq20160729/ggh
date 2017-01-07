@@ -15,12 +15,22 @@
 			</a>
 			<p>云起快速提现</p>
 		</div>
-		<div class="payBox content">
+		<div class="contentWd content">
+			<div class="userBalanceWrap">
+				<p class="userBalance">
+					<span class="bgGray">账号余额</span> 
+					<span class="colorRed">XXX元</span>
+				</p>
+				<span>Tips：余额大于100元才能提现。</span>
+			</div>
 			<form action="#" method="post">
-				<p class="center">你的账号余额为:<span style="color: red;">XXX元</span></p>
-				<p class="center">Tips：余额大于100元才能提现。</p>
-				<input type="tel" name="money" id="money" value="" placeholder="请输入提现金额"/>
-				<input type="button" value="提现" id="pay" class="payButton">
+				<div class="wdMoneyWrap">
+					<p class="wdMoney">
+						<span class="bgGray">提现金额</span>
+						<input type="text" name="wdMoney" id="wdMoney" value="" placeholder="请输入提现金额"/>
+					</p>
+				</div>
+				<input type="button" value="立即提现" id="wdDeposit" class="payButton">
 			</form>
 		</div>
 		<script src="../js/jquery-3.1.0.min.js"></script>

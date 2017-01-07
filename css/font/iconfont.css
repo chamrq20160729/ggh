@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1483697880716'); /* IE9*/
-  src: url('iconfont.eot?t=1483697880716#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1483697880716') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1483697880716') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1483697880716#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1483770118492'); /* IE9*/
+  src: url('iconfont.eot?t=1483770118492#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1483770118492') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1483770118492') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1483770118492#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -20,6 +20,8 @@
 .icon-gengduo:before { content: "\e600"; }
 
 .icon-llmainpageback:before { content: "\e602"; }
+
+.icon-xiala:before { content: "\e62b"; }
 
 .icon-mima:before { content: "\e692"; }
 
